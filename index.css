@@ -1,0 +1,26 @@
+.word-ending-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prev-word {
+    font-style: italic;
+}
+
+.time-container {
+    color: #9e1e9e;
+}
+
+.text {
+    background-color: #6496FF;
+    text-align: center;
+}
+
+/* .input-container {
+
+} */
+
+/* #input-word {
+
+} */
