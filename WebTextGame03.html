@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>끝말 잇기 웹 게임 Ver 03</title>
+</head>
+<body>
+    <h1 ailgn="center">끝말 잇기 웹 게임 시~작!!</h1>
+    <script>
+        var word = '카카오';
+        while (true) {
+            var answer = prompt(word)
+            if (word[word.length - 1 ] === answer[0]) {
+                // 옳은 단어를 입력 했을 경우
+                alert('옳은 단어가 입력 되었습니다.');
+            } else {
+                // 틀린 단어를 입력 했을 경우
+                alert('틀린 단어가 입력 되었습니다 다시 한번 생각해보세요!!');
+            }
+        }
+    </script>
+</body>
+</html>
