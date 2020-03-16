@@ -45,17 +45,17 @@
 
             render() {
                 return (
-                    <>
+                    <React.Fragment>
                         <div>{this.state.first} X {this.state.second} =</div>
                             <input type="number" value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} />
                             <button>입력 !</button>
                         <div>{this.state.result}</div>
-                    </>
+                    </React.Fragment>
                 );
             }
         }
     </script>
-
+    <!-- <>,</> 가 에러 날 시 <React.Fragment></React.Fragment> -->
     <script type="text/babel">
         ReactDOM.render(<div><GuGuDan /><GuGuDan /><GuGuDan /></div>, document.querySelector('#root'));
     </script>
