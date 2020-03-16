@@ -1,0 +1,7 @@
+html를 JavaScript로 표현 할 때 속성은 Calel Case로
+ex) onclick → onClick
+
+- <input type="number" value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} />
+- input.onchange = (e) => { console.log(e.target.value) }
+- input.onchange = function (e) { console.log(e.target.value) }
+- onClick, onChange, onSubmit, onLoad, onInput, onFocus, onBlur
