@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<!-- ▲ 실제 React 배포시 production.js 로 변경 하면 됨,
+React가 동작하는 핵심 코드를 포함. -->
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!-- ▲ React 코드들을 Web 환경에 붙여주는 역할을 수행한다.  -->
+<title>좋아요 버튼 React로 만들어보기01</title>
+</head>
+<body>
+    <div id="root"> <!-- <div id="root"><button>Like</button></div>라는 결과 값이 표현 됨. -->
+        <script>
+            const e = React.createElement; // const 'e' = ~~  'e' >> HTML Tag(태그) 생성해주는 함수
+            
+            class LikeButton extends React.Component { // React 컴포넌트
+                constructor(props) {
+                    super(props);
+                    this.state = { // 상태 지정을 하는 부분, 상태란 바뀌거나 바뀔 요소가 존재 하는 것을 의미함.
+                        liked: false,
+                    };
+                }
+
+                render() { // "LikeButton"을 어떻게 화면에 표시 해줄껀지 결정하는 메소드
+                    return e('button', { 
+                        onClick: () => { this.setState({ liked: true })}, type: 'submit' } ,
+                        this.state.liked === true ? 'Liked' : 'Like', );
+                        // - <button onclick='onclick'>Like</button>를 생성 할 것 이다. (단, <button onclick='onclick'>Like</button> 생성 한다 아님.)
+                        // - <button onclick="() => { consolog.log('clicked') } ">Liked</button>
+                }
+            }
+        </script>
+        <script>
+            ReactDOM.render(e(LikeButton), document.querySelector('#root')); // #root에 결과를 뿌린다.
+        </script>
+    </div>
+</body>
+</html>
